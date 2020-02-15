@@ -7,10 +7,6 @@ services:
     environment:
       - SECRET_KEY=%$$qcdbmywd(qhnllsq!v86b1vyw6%+b3sxaw@8!m$$^z*cubet9
       - DEBUG=1
-      - EMAIL_HOST=smtp.sendgrid.net
-      - EMAIL_HOST_USER=apikey
-      - EMAIL_HOST_PASSWORD=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
-      - EMAIL_PORT=587
     volumes:
       - .://django_for_professionals
     ports:
