@@ -4,6 +4,8 @@ services:
   web:
     build: .
     command: python /django_for_professionals/manage.py runserver 0.0.0.0:8000
+    environment:
+      - SECRET_KEY=%$$qcdbmywd(qhnllsq!v86b1vyw6%+b3sxaw@8!m$$^z*cubet9
     volumes:
       - .://django_for_professionals
     ports:
