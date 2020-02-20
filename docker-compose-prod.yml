@@ -5,9 +5,9 @@ services:
     build: .
     command: python /django_for_professionals/manage.py runserver 0.0.0.0:8000
     environment:
-      - ENVIRONMENT=development
+      - ENVIRONMENT=production
       - SECRET_KEY=%$$qcdbmywd(qhnllsq!v86b1vyw6%+b3sxaw@8!m$$^z*cubet9
-      - DEBUG=1
+      - DEBUG=0
       - STRIPE_TEST_PUBLISHABLE_KEY=pk_test_c4jwQw498ceSHdIThzm9yLjB00kiBoO2GZ
       - STRIPE_TEST_SECRET_KEY=sk_test_GFWnqfkXZYL2pyx8JYVqP9Vq00v6yVVUuK
     volumes:
@@ -18,8 +18,3 @@ services:
       - db
   db:
     image: postgres:11
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
-
-volumes:
-  postgres_data:
